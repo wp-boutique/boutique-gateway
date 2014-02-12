@@ -19,4 +19,10 @@ interface GatewayInterface {
      * @param  integer $orderId
      */
     public function cancel($orderId);
+
+    /**
+     * Gateway form
+     * @return mixed
+     */
+    public function form();
 }

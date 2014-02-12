@@ -1,27 +1,22 @@
 <?php namespace Boutique\Gateway;
 
-class Gateway {
+use Boutique\Invoice\InvoiceInterface;
+
+abstract class Gateway {
 
     /**
-     * Order Implementation
-     * @var Boutique\Order\OrderInterface
+     * Invoice Implementation
+     * @var Boutique\Invoice\InvoiceInterface
      */
-    protected $order;
-
-    /**
-     * Gateway implementation
-     * @var Boutique\Gateway\GatewayInterface
-     */
-    protected $gateway;
+    protected $invoice;
 
     /**
      * Class constructor
      * @param GatewayInterface $gateway
      */
-    public function __construct(OrderInterface $order, GatewayInterface $gateway)
+    public function __construct(InvoiceInterface $invoice)
     {
-        $this->order = $order;
-        $this->gateway = $gateway;
+        $this->invoice = $invoice;
     }
 
 }

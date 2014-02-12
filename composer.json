@@ -10,7 +10,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-
+        "Boutique/Invoice": "dev-master"
     },
     "autoload": {
         "psr-4": {
